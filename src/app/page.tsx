@@ -5,6 +5,7 @@ import Image from "next/image";
 import logo from "../../public/svgexport-24.svg"
 import loadingLogo from "../../public/images/veegram logos/svgexport-21.svg"
 import slidesOfData from "../../components/slides";
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -53,7 +54,7 @@ export default function Home() {
           </p>
         </div>
         <div className="w-[45%]">
-          <Image src={slidesOfData[0].imageUrl} alt="ii" width={200} height={200}/>
+          <Image src={slidesOfData[0].imageUrl} alt={slidesOfData[0].altText} width={200} height={200}/>
         </div>
       </section>
     </main>
