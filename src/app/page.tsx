@@ -5,12 +5,15 @@ import Image from "next/image";
 import logo from "../../public/svgexport-24.svg"
 import loadingLogo from "../../public/images/veegram logos/svgexport-21.svg"
 import slidesOfData from "../../components/slides";
+import Carousels from "../../components/carousel";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [slides, setslides] = useState([]);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
+      // setslides(slidesOfData);
     }, 3000);
   }, [])
   return (
@@ -53,8 +56,8 @@ export default function Home() {
           Ready to connect with your loved ones in a whole new way? Download our app and join the community! #DownloadNow #ConnectWithUs, Feeling social? Level up your social game! Our app offers unique features to make connecting with friends and family even more fun! Squad goals achieved! Our app makes staying connected with your loved ones easier than ever.
           </p>
         </div>
-        <div className="w-[45%]">
-          <Image src={slidesOfData[0].imageUrl} alt={slidesOfData[0].altText} width={200} height={200}/>
+        <div className="w-[45%] flex items-center justify-center">
+          <Carousels slides={slidesOfData}/>
         </div>
       </section>
     </main>
