@@ -14,7 +14,7 @@ export interface Slide {
     isFeatured:boolean
 }
 
-const slidesOfData :Slide[]=[
+const slides :Slide[]=[
     {id:1, altHeader:"", altText:"hello",imageUrl:slideOne, isFeatured:false},
     {id:2, altHeader:"", altText:"hello",imageUrl:slideTwo, isFeatured:false},
     {id:3, altHeader:"", altText:"hello",imageUrl:slideThree, isFeatured:false},
@@ -25,4 +25,4 @@ const slidesOfData :Slide[]=[
 
 
 
-export default slidesOfData;
+export default slides;

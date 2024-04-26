@@ -1,40 +1,49 @@
 import {useState,useRef,useEffect} from 'react'
-import Image, { StaticImageData } from 'next/image';
-import { Slide } from './slides';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"
-interface Slidess {
-   slides:Slide[]
-}
-const Carousels: React.FC<Slidess> = ({slides}) => {
-    const [activeSlide, setActiveSlide] = useState(0);
-    const carouselRef = useRef<HTMLDivElement | null>(null);
+import Image from 'next/image';
+import Slider from "react-slick"
+import slideOne from "../public/images/slide1.webp"
+import slideTwo from "../public/images/slideTwo.png"
+import slideThree from "../public/images/slideThree.png"
+import slideFour from "../public/images/slideFour.png"
+import slideFive from "../public/images/slideFive.gif"
+import slideSix from "../public/images/slideSix.webp"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-    const handleNext = ()=>{
-      setActiveSlide((prevActiveSlide)=>(prevActiveSlide === slides.length -1 ? 0: prevActiveSlide + 1));
-    };
+import { LazyLoadTypes } from 'react-slick';
+const Carousels : React.FC= () => {
+  const settings = {
+    className: "",
+    dots: true,
+    lazyLoad: "progressive" as LazyLoadTypes ,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 2,
+    adaptiveHeight: true,
+    autoplay: true,
+    speed: 5000,
+    autoplaySpeed: 2000,
+    cssEase: "linear"
+  };
 
-    const handlePrevious = () =>{
-      setActiveSlide((prevActiveSlide) => (prevActiveSlide === 0 ? slides.length -1 :prevActiveSlide -1));
-    };
-
-    useEffect(() => {
-      const intervalId = setInterval(()=> handleNext(), 5000);
-      return () => clearInterval(intervalId);
-    }, [])
-    
   return (
     <>
-     <div className='relative overflow-hidden'>
-      <div className='flex space-x-4 transition duration-700 ease-in-out'>
-      {slides.map((slide,index)=>(
-        <div key={slide.id || index} className={`relative w-full ${activeSlide === index ? 'block' : 'hidden'}`}>
-          <Image src={slide.imageUrl} alt={slide.altText} width={200} height={200}/>
+     <div className='slider-container'>
+      <Slider {...settings}>
+        <div>
+          <Image src={slideOne} alt='jfjfj' width={400} height={400}/>
         </div>
-      ))
-
-      }
-      </div>
+        <div>
+          <Image src={slideOne} alt='jfjfj' width={400} height={400}/>
+        </div>
+        <div>
+          <Image src={slideOne} alt='jfjfj' width={400} height={400}/>
+        </div>
+        <div>
+          <Image src={slideOne} alt='jfjfj' width={400} height={400}/>
+        </div>
+      </Slider>
      </div>
     </>
   )
