@@ -41,13 +41,13 @@ export default function Home() {
           </ul>
         </div>
         <div className="mr-32 flex">
-        <Link href=""><button className="border border-[#621E72] font-[700] text-[#621E72] rounded-md h-[45px] w-[120px] mr-4 hover:bg-[#621E72] hover:text-[#fff] hover:border-0">Sign In</button></Link>
-        <Link href=""><button className="bg-[#621E72] font-[700] text-[#fff] rounded-md h-[45px] w-[120px] hover:border hover:border-[#621E72] hover:text-[#621E72] hover:bg-[#FFF7F2]">Sign Up</button></Link>
+        <Link href="/auth/signin"><button className="border border-[#621E72] font-[700] text-[#621E72] rounded-md h-[45px] w-[120px] mr-4 hover:bg-[#621E72] hover:text-[#fff] hover:border-0">Sign In</button></Link>
+        <Link href="/auth/signup"><button className="bg-[#621E72] font-[700] text-[#fff] rounded-md h-[45px] w-[120px] hover:border hover:border-[#621E72] hover:text-[#621E72] hover:bg-[#FFF7F2]">Sign Up</button></Link>
         </div>
        </section>
       </header>
-      <section className="flex justify-between items-center mt-10 w-[100%">
-        <div className="w-[55%]">
+      <section className="flex justify-between overflow-auto items-center mt-10">
+        <div className="flex-1">
           <p className="font-apple text-[30px] font-medium text-[#525254] mt-20 ml-[89px]">Life's better with the people you love ✨</p>
           <div className="ml-[89px] text-[56px] font-bold mt-3 font-apple text-[#621E72]">
               Share moments, memories, and laughs with our app!
@@ -56,9 +56,9 @@ export default function Home() {
           Ready to connect with your loved ones in a whole new way? Download our app and join the community! #DownloadNow #ConnectWithUs, Feeling social? Level up your social game! Our app offers unique features to make connecting with friends and family even more fun! Squad goals achieved! Our app makes staying connected with your loved ones easier than ever.
           </p>
         </div>
-        <div className="w-[35%]">
-          <Carousels/>
-        </div>
+        {/* <div className="w-[45%]"> */}
+          <Carousels slides={slides}/>
+        {/* </div> */}
       </section>
     </main>
       }
