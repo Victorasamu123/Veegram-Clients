@@ -6,8 +6,15 @@ import logo from "../../../../public/svgexport-24.svg"
 import google from "../../../../public/google.png"
 import apple from "../../../../public/apple.png"
 import facebook from "../../../../public/facebook.png"
+import { useRouter } from "next/navigation"
+
 
 export default function Signup() {
+  const router = useRouter()
+  const proceedSignup =()=>{
+    router.push("/auth/signupcomp");
+  }
+
   return (
     <div className="w-[100vw] h-[100vh] bg-[#E8E8E8] flex justify-center items-center">
       <div className="bg-[#FFF7F2] h-[94%] w-[40%] rounded-3xl shadow-lg">
@@ -34,7 +41,7 @@ export default function Signup() {
             <input type="email" className="w-[85%] h-[50px] bg-[#E8E8E8] rounded-[4px] focus:outline-[#621E72] hover:border-[2px] pl-2 text-[#67656E] text-[14px] font-semibold" placeholder="Enter your email address"/>
             </div>
             <div className="block">
-                <button className="mt-[4%] w-[85%] h-[50px] rounded-[4px] text-[#FFFFFF] text-[18px] font-semibold font-apple bg-[#621E72]">Proceed</button>
+                <button className="mt-[4%] w-[85%] h-[50px] rounded-[4px] text-[#FFFFFF] text-[18px] font-semibold font-apple bg-[#621E72]" onClick={proceedSignup}>Proceed</button>
             </div>
         </div>
         <div className="ml-[8%] mt-[3%] flex">
@@ -48,7 +55,7 @@ export default function Signup() {
           <div className="w-[23%] h-[50px] border-2 mr-[35px] rounded-lg cursor-pointer flex justify-center items-center"><Image src={apple} alt="" width={60}/></div>
         </div>
         <div className="ml-[8%] mt-[1%]"> 
-          <span className="text-[14px]">Already have an account?<Link href="/auth/signin" className="font-semibold text-[#621E72]">Signin</Link></span>
+          <span className="text-[14px] text-[#757576] font-apple font-medium">Already have an account?<Link href="/auth/signin" className="font-semibold text-[#621E72]">Signin</Link></span>
         </div>
       </div>
     </div>
