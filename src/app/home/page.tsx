@@ -7,12 +7,13 @@ import { FaCaretDown } from "react-icons/fa";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { RiMessage3Line } from "react-icons/ri";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import SlideBarOne from "./sidebar/page"
+
 export default function HomePage () {
 
     return(
-
    <>
-     <section>
+     <section className="w-full h-full">
      <nav>
       <header className="w-full sticky top-0 bg-[#FFF7F2]">
         <div className="flex justify-between items-center mt-6 pr-8">
@@ -24,15 +25,18 @@ export default function HomePage () {
           </div>
           </div>
           <div className="flex justify-center items-center">
-          <IoPersonAddOutline className="text-[26px] mr-4"/>
-          <RiMessage3Line  className="text-[29px] mr-4"/>
-          <IoMdNotificationsOutline className="text-[29px] mr-4"/>
-          <Image src={testp} alt="" width={35} className="rounded-[50%] mr-1"/>
-          <FaCaretDown />
+          <IoPersonAddOutline className="text-[26px] mr-4 cursor-pointer"/>
+          <RiMessage3Line  className="text-[29px] mr-4 cursor-pointer"/>
+          <IoMdNotificationsOutline className="text-[29px] mr-4 cursor-pointer"/>
+          <Image src={testp} alt="" width={35} className="rounded-[50%] mr-1 cursor-pointer"/>
+          <FaCaretDown className="cursor-pointer"/>
           </div>
         </div>
       </header>
       </nav>
+      <div className="flex">
+          <SlideBarOne/>
+      </div>
      </section>
    </>
     )
