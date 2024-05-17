@@ -8,7 +8,7 @@ import { IoPersonAddOutline } from "react-icons/io5";
 import { RiMessage3Line } from "react-icons/ri";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import SlideBarOne from "./sidebar/page"
-
+import HomeBar from "./homebar/page"
 export default function HomePage () {
 
     return(
@@ -36,6 +36,7 @@ export default function HomePage () {
       </nav>
       <div className="flex">
           <SlideBarOne/>
+          <HomeBar/>
       </div>
      </section>
    </>
