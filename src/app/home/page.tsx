@@ -9,6 +9,8 @@ import { RiMessage3Line } from "react-icons/ri";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import SlideBarOne from "./sidebar/page"
 import HomeBar from "./homebar/page"
+import { Noto_Sans } from 'next/font/google'
+
 export default function HomePage () {
 
     return(
