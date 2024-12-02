@@ -73,7 +73,7 @@ export default function SlideBarOne() {
          <div className="w-full pt-6 pl-8">
           <Link href='' className="flex">
           <IoSettingsOutline className="text-[29px]"/>
-          <p className="text-[18px] font-apple font-semibold mt-[2px] ml-2">Settings</p>
+          <p className={`${notoSans.className} text-[18px] font-apple font-semibold mt-[2px] ml-2`}>Settings</p>
           </Link>
          </div>
          <div className="w-full pt-6 pl-8">
