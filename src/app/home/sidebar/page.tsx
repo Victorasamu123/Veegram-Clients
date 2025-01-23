@@ -16,10 +16,10 @@ import { Roboto } from 'next/font/google'
 
 const notoSans = Roboto({
   subsets:['latin'],
-})
+});
 export default function SlideBarOne() {
   return (
-    <>
+    <>x
     <div className='w-[17%] h-full mt-6'>
        <div className="w-full pt-10 pl-8">
         <Link href='' className="flex">

@@ -10,6 +10,7 @@ import storySeven from "../../../../public/facebook.png"
 import storyEight from "../../../../public/test p.jpg"
 import storyNine from "../../../../public/google.png"
 export default function HomeBar() {
+  
   return (
     <>
       <div className='bg-[#E8E8E8] w-[55%] h-full mt-4'>
