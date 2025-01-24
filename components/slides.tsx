@@ -15,7 +15,7 @@ export interface Slide {
 }
 
 const slides :Slide[]=[
-    {id:1, altHeader:"", altText:"hello",imageUrl:slideOne,     isFeatured:false},
+    {id:1, altHeader:"", altText:"hello",imageUrl:slideOne, isFeatured:false},
     {id:2, altHeader:"", altText:"hello",imageUrl:slideTwo, isFeatured:false},
     {id:3, altHeader:"", altText:"hello",imageUrl:slideThree, isFeatured:false},
     {id:4, altHeader:"", altText:"hello",imageUrl:slideFour, isFeatured:false},

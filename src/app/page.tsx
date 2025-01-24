@@ -4,8 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/svgexport-24.svg"
 import loadingLogo from "../../public/images/veegram logos/svgexport-21.svg"
-import slides from "../../components/slides";
-import Carousels from "../../components/carousel";
+import sideImageOne from "../../public/images/slideFive.gif"
+import sideImageTwo from "../../public/images/"
+// import slides from "../../components/slides";
+// import Carousels from "../../components/carousel";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -56,9 +58,9 @@ export default function Home() {
           Ready to connect with your loved ones in a whole new way? Download our app and join the community! #DownloadNow #ConnectWithUs, Feeling social? Level up your social game! Our app offers unique features to make connecting with friends and family even more fun! Squad goals achieved! Our app makes staying connected with your loved ones easier than ever.
           </p>
         </div>
-        {/* <div className="w-[45%]"> */}
-          <Carousels slides={slides}/>
-        {/* </div> */}
+        <div className="flex-1"> 
+          <Image src={sideImageOne} alt="veegram info" width={700} height={200} className="flex justify-center items-center"/>
+        </div>
       </section>
     </main>
       }
