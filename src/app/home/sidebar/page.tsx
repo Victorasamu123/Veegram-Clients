@@ -11,10 +11,10 @@ import { IoCreateOutline } from "react-icons/io5";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdLogout } from "react-icons/md";
 import profile from "../../../../public/test p.jpg"
-import { Roboto } from 'next/font/google'
+import { Noto_Sans } from 'next/font/google'
 
 
-const notoSans = Roboto({
+const notoSans = Noto_Sans({
   subsets:['latin'],
 });
 export default function SlideBarOne() {
